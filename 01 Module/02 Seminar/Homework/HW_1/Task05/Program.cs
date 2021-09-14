@@ -27,9 +27,9 @@ namespace Task05
                     Console.WriteLine("args error");
                     return;
                 }
-                d &= a <= b + c;
-                d &= b <= c + a;
-                d &= c <= a + b;
+                d &= a < b + c;
+                d &= b < c + a;
+                d &= c < a + b;
                 string ans = d ? "Exists" : "Dont exist";
                 Console.WriteLine(ans);
                 Console.WriteLine("Press ESC to exit / ENTER to continue!");
