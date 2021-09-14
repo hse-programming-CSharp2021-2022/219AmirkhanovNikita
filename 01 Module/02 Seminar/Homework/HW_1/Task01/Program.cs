@@ -22,6 +22,7 @@ namespace Task01
                     c++;
                 }
             }
+            if ((n <= 0 && k > 0) || (n >= 0 && k < 0)) c *= -1;
             return c;
         }
 
