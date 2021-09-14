@@ -15,19 +15,27 @@ namespace Task02
         {
             uint n;
             string ipt;
-            ipt = Console.ReadLine();
-            if (!uint.TryParse(ipt, out n)) {
-                Console.WriteLine("Args error");
-                return;
-            } else if (n>999 && n <100){
-                Console.WriteLine("Args error");
-                return;
-            }
-            List<uint> l = new List<uint>(3) { a(ipt[0]), a(ipt[1]), a(ipt[2]) };
-            l.Sort();
-            l.Reverse();
-            Console.WriteLine(string.Join("",l));
-        
+            do
+            {
+                ipt = Console.ReadLine();
+                if (!uint.TryParse(ipt, out n))
+                {
+                    Console.WriteLine("Args error");
+                    return;
+                }
+                else if (n > 999 || n < 100)
+                {
+                    Console.WriteLine("Args error");
+                    return;
+                }
+                List<uint> l = new List<uint>(3) { a(ipt[0]), a(ipt[1]), a(ipt[2]) };
+                l.Sort();
+                l.Reverse();
+                Console.WriteLine(string.Join("", l));
+                Console.WriteLine("Press ESC to exit / ENTER to continue!");
+            } while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+
         }
     }
 }
