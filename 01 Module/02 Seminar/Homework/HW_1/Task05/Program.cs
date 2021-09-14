@@ -22,7 +22,7 @@ namespace Task05
                 s &= double.TryParse(r(), out a);
                 s &= double.TryParse(r(), out b);
                 s &= double.TryParse(r(), out c);
-                if (!s) // if для проверки значений
+                if (!s) // if для проверки значений!
                 {
                     Console.WriteLine("args error");
                     return;
